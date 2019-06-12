@@ -1,0 +1,47 @@
+Quiz D
+Name: Tashi Tsering
+Date: 04/17/2019
+
+
+1- Explain the difference between move and copy in constructors and assignment operators logic and
+their syntax.
+// copy
+if object a gets copied and you need to use it then we use copy constructor &,
+which creates object by initializing it with an object of the same class, which has been created previously. 
+ex.
+Class-name(Class-name&); // copy-construcotr
+Class-name& operator=(Class-name&); // copy-assignment operator
+
+
+// move
+when object a gets copied and object a is not needed, copies the object and (recycles the object data), data 
+is "about to be destroyed anyway;" such data is called an rvalue &&. (object must not be const)
+ex. 
+Class-name(Class-name&&); // move-construcotr
+Class-name& operator=(Class-name&&); // move-assignment operator
+
+2 and 3-
+If we have a validation logic as follows:
+	bool validMark(int value) {
+	return value >= 0 && value <= 100;
+	}
+And we want to be able to pass this logic as an argument to a function, there are two choices to
+do so; function pointer and function object.
+2- Write the syntax for a function pointer variable that can point to the logic above.
+	bool (*fun_ptr)(int) = &validMark;
+	
+3- Then create the function object equivalent for the logic above and explain each method.
+	bool (*fun_ptr)(int) = validMark;
+
+
+4 – Explain what the promise class template does as a Provider between threads.
+
+
+A promise object creates or acquires a shared state in which it can store a value. 
+
+The promise class template provides a simple set_value() counterpart to the get() member function of
+ the future class template.
+
+
+
+

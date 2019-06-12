@@ -1,0 +1,66 @@
+Quiz E
+Name: Tashi Tsering
+Date: 04/17/2019
+
+1- Suppose this code is compiled and saved under an executable called “prg”.
+What is the exact output:
+int main(int argc, char* argv[]) {
+for (int i = 0; i < argc; i++) {
+cout << argv[i][i] << " ";
+}
+cout << endl;
+return 0;
+}
+if the program is executed as follows:
+prg one two three <ENTER>
+
+/ r e  e 
+
+
+2- Having an array as:
+int x[] = { 2, 6, 4, 7 };
+Print all the elements by completing the following for loop:
+
+for ( auto a : x) {
+	cout << a;
+}
+
+3- Having the following two functions:
+void foo(int value);
+void faa(double value);
+write a program to run the above two functions simultaneously passing 1234 to the first
+function and 123.45 to the second one.
+Make sure all the threads are joined at the end.
+
+#include <iostream>       // std::cout
+#include <thread>         // std::thread, std::this_thread::sleep_for
+
+void foo(int value) {
+    std::cout << "foo " << value << "\n";
+}
+void faa(double value) {
+     std::cout << "faa " << value << "\n";
+}
+ 
+int main() 
+{
+  std::cout << "Spawning 2 threads...\n";
+  std::thread t1 (foo,1234);
+  std::thread t2 (faa,123.45);
+
+  std::cout << "Done spawning threads. Now waiting for them to join:\n";
+ 
+  t1.join();
+  t2.join();
+
+  std::cout << "All threads joined!\n";
+
+  return 0;
+}
+
+
+
+
+
+
+

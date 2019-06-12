@@ -1,0 +1,63 @@
+Quiz C
+Name: Tashi Tsering
+Date: 04/17/2019
+
+1 Explain how vector and list containers are different in storing data.
+
+- a vector is an array with automatic memory management. The data is contiguous in memory. 
+ They store their elements on free store and can adjust their size as required.
+- In a list the data is stored in unrelated memory locations. The container uses an allocator object to dynamically handle its storage needs.
+
+
+2- This code snippet:
+list<int> L({ 2,3,5 });
+list<int>::iterator a;
+for (a = L.begin(); a != L.end(); a++) {
+cout << *a << " ";
+}
+cout <<endl;
+
+L.insert(L.begin(),1);
+L.insert(--L.end(), 4);
+L.insert(L.end(), 6);
+
+for (a = L.begin(); a != L.end(); a++) {
+cout << *a << " ";
+}
+cout <<endl;
+Prints:
+2 3 5
+2 3 5
+Add the necessary code between the two for loops to add elements to the L list so the output
+changes to:
+2 3 5
+1 2 3 4 5 6
+
+
+3- Explain the term Resource Acquisition(or Allocation) Is Initialization. Give an example of its
+implementation in C++.
+
+also known as RAII (Resource Acquisition Is Initialization) 
+is a technique for ensuring the availability and disposal of dynamically allocated memory.
+A typical case for RAII is smart pointers
+Smart pointers are classes that contain a pointer and take care of deleting them when going out of scope. 
+
+Ex: std::unique_ptr, std::shared_ptr
+std::unique_ptr<Title> tt(new Title(t));
+
+
+RAII techniques like smart pointers (Smart pointer) wrap a dynamically allocated resource and delete
+the dynamically allocated resource in the destructor. Since a smart pointer would be instantiated 
+on the stack, the destructor is called when it goes out of scope.
+
+basically it's a way to safely manage your resources, such as memory, so you don't get any leaks.
+
+4- What does thread_local do?
+
+When you declare a variable thread_local then each thread has its own copy. When you refer to it by name, 
+then the copy associated with the current thread is used. 
+
+each thread has a separate copy of the object. The object's life time starts either at thread start 
+(for global variables) or at first initialization (for block-local statics), and ends when the thread ends (i.e. when join() is called).
+
+

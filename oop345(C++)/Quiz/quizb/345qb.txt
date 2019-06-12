@@ -1,0 +1,89 @@
+// Quiz b
+// File: 345qb.txt
+// Date: 04/09/2019
+// Author: Tashi Tsering
+// Student ID: 114763170
+// email: ttsering11@myseneca.ca
+
+
+1. Name all the providers of the STL  Algorithms and explain what they do.
+
+container template classes (sequential containers, container adaptors, associative containers (beyond scope)
+- A container class represents the shell of a data structure, manages the memory associated with the elements of 
+that structure and provides member functions to access those elements.
+iterators 
+- Iterators facilitate the traversal of the data structure and provide simple access to range of elements. 
+algorithms
+-Algorithms implement solutions for sequences of elements through the use of iterators and function objects. 
+
+2. What is a function wrapper? Explain.
+wrapper function is a function that is used to simplify the calling of another function.
+
+ #include <iostream>
+ #include <functional>
+
+ // a simple function
+ long multiply(long x, long y) { return x * y; }
+
+ // a functor
+ struct Multiply {
+     long operator()(long x, long y) { return x * y; }
+ };
+
+ int main() {
+     std::function<long(long, long)> f1 = multiply;
+     std::function<long(long, long)> f2 = Multiply();
+     std::function<long(long, long)> f3 = [](long x, long y) 
+      { return x * y; };
+     std::cout << "f1(10, 2) = " << f1(10, 2) << std::endl;
+     std::cout << "f2(10, 2) = " << f2(10, 2) << std::endl;
+     std::cout << "f3(10, 2) = " << f3(10, 2) << std::endl;
+ }
+3 function objects are created, f1 f2 and f3 are wrapped to their own function and we call f1 f2 f3 with the paramaters of (10,2)
+
+3. What is the difference between find and find_if algorithms? Give Examples.
+
+std::find - finds the first element in the range equal to the specified value
+Returns an iterator to the first element in the range [first,last) that compares equal to val. If no such element is found, the function returns last.
+ex  InputIterator find (InputIterator first, InputIterator last, const T& val)
+
+std::find_if - finds the first element in the range that satisfies the predicate
+Returns an iterator to the first element in the range [first,last) for which pred returns true. If no such element is found, the function returns last.
+ex   InputIterator find_if (InputIterator first, InputIterator last, UnaryPredicate pred)
+
+4. Explain how sort algorithm works and give an example for sorting a vector of double numbers
+
+std::sort
+Sorts the elements in the range [first,last) into ascending order.
+
+The elements are compared using operator< for the first version, and comp for the second.
+
+Equivalent elements are not guaranteed to keep their original relative order
+
+// sort algorithm example
+#include <iostream>     // std::cout
+#include <algorithm>    // std::sort
+#include <vector>       // std::vector
+
+
+struct myclass {
+  bool operator() (double i,double j) { return (i<j);}
+} myobject;
+
+int main () {
+  double mydoubles[] = {32.20,71.40,12.11,45.30,26.50,80.10,53.15,33.35};
+  std::vector<double> myvector (mydoubles, mydoubles+8);               // 32 71 12 45 26 80 53 33
+
+  // using object as comp
+  std::sort (myvector.begin(), myvector.end(), myobject);     //(12 26 32 33 45 53 71 80)
+
+  // prdouble out content:
+  std::cout << "myvector contains:";
+  for (std::vector<double>::iterator it=myvector.begin(); it!=myvector.end(); ++it)
+    std::cout << ' ' << *it;
+  std::cout << '\n';
+
+  return 0;
+}
+
+

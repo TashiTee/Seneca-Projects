@@ -1,0 +1,96 @@
+Script started on Wed 27 Feb 2019 11:55:31 PM EST
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line : w4 w4_test.dat 
+
+Messages loaded from file
+=========================
+>User  : jim
+ Tweet : Workshop 4 is cool
+>User  : harry
+ Reply : jim
+ Tweet : working on workshop 4 now
+>User  : dave
+ Tweet : what the ^#$%!
+>User  : john
+ Reply : harry
+ Tweet : I'm done
+
+Message Pack 1 Contents
+=======================
+ No of Messages 4
+>User  : jim
+ Tweet : Workshop 4 is cool
+>User  : harry
+ Reply : jim
+ Tweet : working on workshop 4 now
+>User  : dave
+ Tweet : what the ^#$%!
+>User  : john
+ Reply : harry
+ Tweet : I'm done
+
+Message Pack 2 Contents
+=======================
+ No of Messages 4
+>User  : jim
+ Tweet : Workshop 4 is cool
+>User  : harry
+ Reply : jim
+ Tweet : working on workshop 4 now
+>User  : dave
+ Tweet : what the ^#$%!
+>User  : john
+ Reply : harry
+ Tweet : I'm done
+
+Message Pack 1 Contents
+=======================
+ No of Messages 0
+
+*** Error in `w4': malloc(): memory corruption: 0x0000000000efac40 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x82c96)[0x7f6ab1877c96]
+/lib64/libc.so.6(__libc_malloc+0x4c)[0x7f6ab187a1ac]
+/usr/local/gcc/8.2.0/lib64/libstdc++.so.6(_Znwm+0x18)[0x7f6ab216e4c8]
+w4[0x404e0b]
+w4[0x402cd0]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x7f6ab18173d5]
+w4[0x402669]
+======= Memory map: ========
+00400000-00407000 r-xp 00000000 00:28 1154272192                         /home/ttsering11/oop345/w4/athome/w4
+00606000-00607000 r--p 00006000 00:28 1154272192                         /home/ttsering11/oop345/w4/athome/w4
+00607000-00608000 rw-p 00007000 00:28 1154272192                         /home/ttsering11/oop345/w4/athome/w4
+00ee9000-00f1b000 rw-p 00000000 00:00 0                                  [heap]
+7f6aac000000-7f6aac021000 rw-p 00000000 00:00 0 
+7f6aac021000-7f6ab0000000 ---p 00000000 00:00 0 
+7f6ab17f5000-7f6ab19b7000 r-xp 00000000 fd:00 697                        /usr/lib64/libc-2.17.so
+7f6ab19b7000-7f6ab1bb7000 ---p 001c2000 fd:00 697                        /usr/lib64/libc-2.17.so
+7f6ab1bb7000-7f6ab1bbb000 r--p 001c2000 fd:00 697                        /usr/lib64/libc-2.17.so
+7f6ab1bbb000-7f6ab1bbd000 rw-p 001c6000 fd:00 697                        /usr/lib64/libc-2.17.so
+7f6ab1bbd000-7f6ab1bc2000 rw-p 00000000 00:00 0 
+7f6ab1bc2000-7f6ab1bd9000 r-xp 00000000 fd:00 18268567                   /usr/local/gcc/8.2.0/lib64/libgcc_s.so.1
+7f6ab1bd9000-7f6ab1dd8000 ---p 00017000 fd:00 18268567                   /usr/local/gcc/8.2.0/lib64/libgcc_s.so.1
+7f6ab1dd8000-7f6ab1dd9000 r--p 00016000 fd:00 18268567                   /usr/local/gcc/8.2.0/lib64/libgcc_s.so.1
+7f6ab1dd9000-7f6ab1dda000 rw-p 00017000 fd:00 18268567                   /usr/local/gcc/8.2.0/lib64/libgcc_s.so.1
+7f6ab1dda000-7f6ab1edb000 r-xp 00000000 fd:00 31773                      /usr/lib64/libm-2.17.so
+7f6ab1edb000-7f6ab20da000 ---p 00101000 fd:00 31773                      /usr/lib64/libm-2.17.so
+7f6ab20da000-7f6ab20db000 r--p 00100000 fd:00 31773                      /usr/lib64/libm-2.17.so
+7f6ab20db000-7f6ab20dc000 rw-p 00101000 fd:00 31773                      /usr/lib64/libm-2.17.so
+7f6ab20dc000-7f6ab2250000 r-xp 00000000 fd:00 16900611                   /usr/local/gcc/8.2.0/lib64/libstdc++.so.6.0.25
+7f6ab2250000-7f6ab2450000 ---p 00174000 fd:00 16900611                   /usr/local/gcc/8.2.0/lib64/libstdc++.so.6.0.25
+7f6ab2450000-7f6ab245a000 r--p 00174000 fd:00 16900611                   /usr/local/gcc/8.2.0/lib64/libstdc++.so.6.0.25
+7f6ab245a000-7f6ab245c000 rw-p 0017e000 fd:00 16900611                   /usr/local/gcc/8.2.0/lib64/libstdc++.so.6.0.25
+7f6ab245c000-7f6ab2460000 rw-p 00000000 00:00 0 
+7f6ab2460000-7f6ab2482000 r-xp 00000000 fd:00 689                        /usr/lib64/ld-2.17.so
+7f6ab2669000-7f6ab266e000 rw-p 00000000 00:00 0 
+7f6ab267e000-7f6ab2681000 rw-p 00000000 00:00 0 
+7f6ab2681000-7f6ab2682000 r--p 00021000 fd:00 689                        /usr/lib64/ld-2.17.so
+7f6ab2682000-7f6ab2683000 rw-p 00022000 fd:00 689                        /usr/lib64/ld-2.17.so
+7f6ab2683000-7f6ab2684000 rw-p 00000000 00:00 0 
+7ffcb8da2000-7ffcb8dc3000 rw-p 00000000 00:00 0                          [stack]
+7ffcb8dec000-7ffcb8dee000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+Script done on Wed 27 Feb 2019 11:55:31 PM EST

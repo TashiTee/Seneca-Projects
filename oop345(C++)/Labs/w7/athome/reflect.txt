@@ -1,0 +1,75 @@
+/*************************************************************************
+// week 7 at home
+// File: reflect.txt
+// Version: 1.0
+// Date: 04/01/2019
+// Author: Tashi Tsering
+// Description: reflection about ws7 and quiz reflection
+// A short explanation of what the filename is about goes here!
+// Revision History
+// -----------------------------------------------------------
+// Name            Date            Reason
+// Fardad          2019-01-15      created empty filename for workshop
+*************************************************************************/
+
+- The reason for using the vector container rather than any other available in the STL.
+by default we use vectors because when using containers, vector is the fastest safe container to access information and it is like an
+array that can be dynamically resize. since vector is a linear sequence that allows rapid random access to its elements
+
+- List the STL template functions that you used in your solution.
+
+I used these template functions 
+
+std::pair<T,T> sum_x_y() const:
+- std::accumulate(...)
+
+T sigma() const:
+- std::for_each(...)
+
+T median() const:
+- std::sort(...)
+
+- Identify where you used lambda expressions
+
+Lambda expressions were used in the following methods:
+
+std::pair<T,T> sum_x_y() const;
+
+When accumulating the values of the x and y coordinates, a lambda was needed for each in order to add to the current value
+
+	T sigma() const;
+
+In order to calculate the total for the sigma, a lambda was needed in order to subtract the mean from the current y value prior to being squared.
+
+	T slope() const;
+
+In order for the slope to be calculated, xs and ys needed to be multipled to each other. A lambda was also used when the sum of each x^2 needed to be found.
+
+- Comment on the ease of programming associated with the STL.
+
+STL containers provided a way for programmers to interact and process data coming from containers.
+
+QUIZ REFLECTION (got 6/10)
+
+1- Print all the integer values in ints without removing any of them
+
+for(int i =0; i < ints.size(); i++ ){
+	cout << ints[i];
+}
+
+2- Print all the integer values in ints without removing any of them(using an iterator)
+
+	for(auto a : ints) {
+	cout << a;
+	}
+
+3- Print all the integer values in ints in reverse order and remove them at the same time so when
+the printing is over ints is empty
+
+	while(!ints.empty()) {
+		cout << ints.back();
+		cout<<ints.pop_back()
+	}
+4- remove all the values from ints so it becomes an empty deque
+
+ints.clear();

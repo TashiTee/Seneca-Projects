@@ -1,0 +1,16 @@
+9.2 8.2 7.2 6.2 5.2 0 1.2 2.2 3.2 4.2 
+9.2
+4.2
+9.2
+3.2
+8.2
+3.2
+8.2 7.2 6.2 5.2 0 1.2 2.2 3.2 
+Milhouse Maggie Marge Homer Bart Lisa Waylon 
+Milhouse
+Waylon
+Milhouse
+Lisa
+Maggie
+Lisa
+Maggie Marge Homer Bart Lisa 

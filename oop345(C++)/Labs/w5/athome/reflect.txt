@@ -1,0 +1,57 @@
+/*************************************************************************
+// week 5 at home
+// File: reflect.txt
+// Version: 1.0
+// Date: 03/06/2019
+// Author: Tashi Tsering
+// Description: reflect.txt
+// A short explanation of what the file is about goes here!
+// Revision History
+// -----------------------------------------------------------
+// Name            Date            Reason
+// Fardad          2019-01-15      created empty file for workshop
+*************************************************************************/
+
+The difference between the implementations of a functor and a lambda expression.
+
+A Functor is a object which acts like a function. Basically, a class which defines operator() and can be used to hold state 
+example
+KVList(const KVList &) = delete; // is a functor 
+
+A lambda expression is an anonymous function nested within the body of another function.  
+It represents an unnamed function object that can capture variables within the scope of its caller.  
+It consists of its own function body and a capture-list that references the non-local variables accessed by that body
+example
+gradeList.display(std::cout, [](float grade) -> std::string
+
+A list of the exceptions that you have reported and the cases where you terminated execution normally.
+
+There is a throw "ERROR: The number of elements received in the constructor is not positive-valued";
+and 
+throw "ERROR: The index passed to the subscripting operator is out-of-bounds";
+
+to terminate the execution normally I did 
+
+try { ...
+if (grade >= 90 && grade <= 100)
+				return "A+";
+			else if (grade >= 80 && grade <= 89.9)
+				return "A ";
+			else if (grade >= 75 && grade <= 79.9)
+				return "B+";
+			else if (grade >= 70 && grade <= 74.9)
+				return "B ";
+			else if (grade >= 65 && grade <= 69.9)
+				return "C+";
+			else if (grade >= 60 && grade <= 64.9)
+				return "C ";
+			else if (grade >= 55 && grade <= 59.9)
+				return "D+";
+			else if (grade >= 50 && grade <= 54.9)
+				return "D ";
+			else if (grade >= 0 && grade <= 49.9)
+				return "F ";
+			else
+				throw "Not a grade";
+				}
+

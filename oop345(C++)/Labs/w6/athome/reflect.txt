@@ -1,0 +1,32 @@
+
+/*************************************************************************
+// week 6 at home
+// File: reference.txt
+// Version: 1.0
+// Date: 03/25/2019
+// Author: Tashi Tsering
+// Description: reflection
+// A short explanation of what the filename is about goes here!
+// Revision History
+// -----------------------------------------------------------
+// Name            Date            Reason
+// Fardad          2019-01-15      created empty filename for workshop
+*************************************************************************/
+
+The reason for using the vector container rather than any other available in the STL.
+by default we use vectors because when using containers, vector is the fastest safe container to access information and it is like an
+array that can be dynamically resize. since 
+vector is a linear sequence that allows rapid random access to its elements
+However, vectors have the ability to handle its own destruction once the object goes out of scope
+
+Why there is no need to deallocate the dynamically allocated memory in your own code.
+Vectors can deallocate memory as soon as the object goes out of scope
+
+How the range-based for simplifies coding in this case.
+
+Since the current element of the container is accessed via refernece in the range based for loop, we don't need to worry about the index this way 
+we don't have to access via index ex product[i]
+
+Include all corrections to the Quiz(zes) you have received (30%). 
+DID NOT RECEIVE MY QUIZ BACK 
+

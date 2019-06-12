@@ -1,0 +1,39 @@
+/*************************************************************************
+// week 1 at home
+// File: reflect.txt
+// Version: 1.0
+// Date: 01/24/2019
+// Author: Tashi Tsering
+// Description: reflection of in lab
+// A short explanation of what the file is about goes here!
+// Revision History
+// -----------------------------------------------------------
+// Name            Date            Reason
+// Fardad          2019-01-15      created empty file for workshop
+*************************************************************************/
+
+1. The difference between internal and external linkage 
+- internal linkage means a variable is only visible in its translation unit. 
+- Which means declaring another same varaible name in separate translation units will be different variables 
+at different address.
+- External linkage would make the varaible visible in other modules
+- You use the extern keyword to declare a variable with external linkage.
+
+EXTERN:
+String.cpp::7
+	extern int INITIAL;
+w1.cpp
+	int INITIAL = 3;
+- This operation allowed me to define an identifier within another translation unit (w1.cpp) while declaring it in another (String.cpp). 
+- It essentially allows me to tell the compiler to specifically look within another translation unit for the value of the declared identifier.
+
+2. The execution effect of the code in the process() function that creates the String object which is inserted into standard output (which member function(s) does this code call) 
+
+- This piece of code (process.cpp::12) calls an overloaded operator '<<' defined in String.cpp 
+- it insert the member data 'm_string' into the ostream output.
+
+3. The changes that you made in upgrading your String class. 
+-  I changed it to dynamically allocate a character array,
+- copy the value_ parameter to the class's string value
+- delete the allocated value when the class is destroyed from memory using a destroyer.
+- I also had to remove the length check to see if the input was less than or equal to three, so that it accepts any length of string.

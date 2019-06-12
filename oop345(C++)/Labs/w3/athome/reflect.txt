@@ -1,0 +1,33 @@
+/*************************************************************************
+// week 3 athome
+// File: reflect.txt
+// Version: 1.0
+// Date: 02/12/2019
+// Author: Tashi Tsering
+// Description: reflection of w3 at home
+// A short explanation of what the file is about goes here!
+// Revision History
+// -----------------------------------------------------------
+// Name            Date            Reason
+// Fardad          2019-01-15      created empty file for workshop
+*************************************************************************/
+
+•	The reason for specializing the sum() member function.
+process a particular type that inserts a single space between concatenating strings
+
+V sum(const L &label_, const V &sum) const {
+			return label_ == LVPair<L, V>::label ? init_val + sum : sum;
+		}
+
+•	The reason for specializing the initial value for a summation.
+We do this so that the class function returns the initial value for the summation of a set of LVPair objects of label type L. 
+
+std::string sum(const std::string &label_, const std::string &sum) const {
+			return label_ == LVPair<std::string, std::string>::label ? sum + " " + init_val : sum;
+		}
+
+•	The reason for defining the class variable outside the class definition.
+because the class varaible is a static data member which needs to be defined outside the class defintion
+so that the one defintion rule isn't being broken
+
+size_t SummableLVPair<std::string, std::string>::min_field_width = 0;

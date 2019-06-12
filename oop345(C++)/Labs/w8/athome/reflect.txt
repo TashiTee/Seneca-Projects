@@ -1,0 +1,57 @@
+/*************************************************************************
+// week 8 in lab
+// File: reflect.txt
+// Version: 1.0
+// Date: 04/08/2019
+// Author: Tashi Tsering
+// Description: build list of products using raw and smart pointers
+// A short explanation of what the filename is about goes here!
+// Revision History
+// -----------------------------------------------------------
+// Name            Date            Reason
+// Fardad          2019-01-15      created empty filename for workshop
+*************************************************************************/
+
+The advantage that smart pointer syntax provides.
+
+-  A smart pointer knows its objet, unlike a raw pointer, smart pointers can manage the memory of the object to which it points. 
+- a smart pointer design supports automatic initialization, safe exception handling and automatic destruction of the owned object
+at the appropriate time
+- Smart pointers also prevent resource leaks since resource management is implicitly handled 
+(no explicit deallocation of memory is needed to be declared after the pointer is used). 
+- It also allows for an explicit definition of the ownership of the pointer itself.
+
+for my smart pointer function I did not have to deallocate memory for pl compared to the raw pointer function 
+
+List<Product> mergeSmart(const List<Description>& desc, const List<Price>& price) {
+		List<Product> priceList;
+		// TODO: Add your code here to build a list of products
+		//         using smart pointers
+		for (size_t outer = 0; outer < desc.size(); ++outer) {
+			for (size_t inner = 0; inner < price.size(); ++inner) {
+				if (desc[outer].code == price[inner].code) {
+					std::unique_ptr<Product> pl{ new Product(desc[outer].desc, price[inner].price) };
+					pl->validate();
+					priceList += pl;
+					// no need to dealloacte memory
+				}
+			}
+		}
+		return priceList;
+	}
+}
+
+- List the difference between raw and smart pointer syntax in your solution.
+
+The most obvious difference between a smart pointer and a raw pointer is the use of a dereferencing operator(*). 
+
+A raw pointer is declared as the following:
+Product* pl = new Product(desc[outer].desc, price[inner].price);
+
+As shown, a dereferencing operator is needed in order to classify the p identifier as a raw pointer.
+
+Meanwhile, a smart pointer is actually a templated object (Product):
+std::unique_ptr<Product> pl{ new Product(desc[outer].desc, price[inner].price) };
+
+This line clearly indicates that the 'p' identifier is a unique_ptr that cannot be copied due to the following deleted copy operations
+

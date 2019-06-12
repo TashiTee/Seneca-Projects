@@ -1,0 +1,19 @@
+/*************************************************************************
+// week 2 at home
+// File: reflect.txt
+// Version: 1.0
+// Date: 02/05/2019
+// Author: Tashi Tsering
+// Description: reflect.txt file
+// A short explanation of what the file is about goes here!
+// Revision History
+// -----------------------------------------------------------
+// Name            Date            Reason
+// Fardad          2019-01-15      created empty file for workshop
+*************************************************************************/
+
+
+- In this workshop I learned how to implemented how to properly implement copy constructors, move constructors as well as 
+their operators while using pointers as private members of a class.
+- I used a copy constructor to make a copy of an object to a new object that contains the same data or holds the same 
+resource as the source object. 
