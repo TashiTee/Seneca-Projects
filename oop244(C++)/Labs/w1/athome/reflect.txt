@@ -1,0 +1,24 @@
+/********************************
+Tashi Tsering
+Student Id: 114763170
+Seneca Email: ttsering11@myseneca.ca
+Date Completion: September 17 2018
+
+*/
+
+1. Namespace is a scope for the entities that it encloses. Scoping rules avoid identifier conflicts across different namespaces
+We use namespace to avoid conflicts from having same identifiers for different variables in the application.
+
+2. A header file is generally used to define all of the functions, variables and constants contained in any function library 
+for example the  header file stdio.h should be used if you wanted to use the two standard I/O functions printf and scanf. 
+
+3. We don't compile header files because if we compile the header files with two files having #include the compiler is going to fail 
+and tell you that there is repetitive declartion. To prevent this problem and each header file is included only once we have to use 
+safeguards in our header files.
+
+4. If you #include a cpp file in several other files in your program, the compiler will try to compile the cpp file multiple times, 
+and will generate an error as there will be multiple implementations of the same methods.
+
+5. I have learned how namespaces can be used to avoid conflicts from having multiple same identifiers. I now know how headerfiles works
+and in order to not compile two files that call one header file we have to use safeguards. We should never include .cpp files  in 
+another file so that we don't get compilation errors.

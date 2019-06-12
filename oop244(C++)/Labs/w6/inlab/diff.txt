@@ -1,0 +1,10 @@
+
+In line number 30 of your output:
+The output should be:
+(+1) 416 123-0002
+But your output is: 
+(+1) 416 123-2
+             ^
+-------------|
+Professor's character ASCII code: hex(30), dec(48)
+un-matched character ASCII code: hex(32), dec(50)

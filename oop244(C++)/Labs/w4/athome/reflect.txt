@@ -1,0 +1,32 @@
+/**********************************************************
+Workshop 4 - Constructors at home
+// Workshop <Workshop #4>
+// Name: Tashi Tsering
+// Student #: 114763170
+// Course: OOP244 Fall 2018
+// File: reflect.txt
+**********************************************************/
+
+1)	What is a safe empty state? Could you define a safe empty state that differs from the empty state that you defined?
+
+- The safe empty state is a state for an object where it does not contain values that are user defined . It is used to ensure 
+that the object does not contain garbage values upon initialization of the object.
+- Aside from that, there is the not empty state when we initialize the object with values using a public member function
+
+2)	Identify the parts of your source code where to minimized code duplication.
+- using the default constructor to initialize invalid values to a safe empty safe state
+
+3)	The canTravelWith(...) member function accesses the private data of the object referenced in its parameter.
+Explain why C++ allows this access.
+- the function acceses the address of the private data not the data itself in the object.
+
+4)	What statement did you add to ensure that the strncpy(...) function exe-cutes correctly?
+- Destination[] = ‘\0’, this statement puts a null terminator at the end of the string to make the string is null terminated.
+
+5)	Explain what you have learned in this workshop.
+- I learned how to use function overloading to use the same member function name with different number of parameters passed to it.
+How to use bool functions to check the validity of the input data. How to use strncpy correrctly.
+
+QUIZ 4 reflection
+
+I got full marks on the quiz

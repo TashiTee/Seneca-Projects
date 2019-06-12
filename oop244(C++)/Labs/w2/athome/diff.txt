@@ -1,0 +1,10 @@
+
+In line number 15 of your output:
+The output should be:
+The 1st Kingdom entered is
+But your output is: 
+The 1st kingdom entered is
+        ^
+--------|
+Professor's character ASCII code: hex(4b), dec(75)
+un-matched character ASCII code: hex(6b), dec(107)

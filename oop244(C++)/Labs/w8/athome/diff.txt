@@ -1,0 +1,10 @@
+
+In line number 11 of your output:
+The output should be:
+Per Transaction Fee: 0.50
+But your output is: 
+Transaction Fee: 0.50
+^
+|
+Professor's character ASCII code: hex(50), dec(80)
+un-matched character ASCII code: hex(54), dec(84)

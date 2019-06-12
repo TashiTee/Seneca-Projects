@@ -1,0 +1,38 @@
+
+/**********************************************************
+Workshop 5 - Member Operator Overloads athome
+// Workshop <Workshop #5>
+// Name: Tashi Tsering
+// Student #: 114763170
+// Course: OOP244 Fall 2018
+// File: reflect.txt 
+**********************************************************/
+
+1. The operator+ returns a Fraction object. Explain why this operator should not return a reference to a Fraction object. 
+
+Because the reference to the current Fraction object is a constant value and cannot be modified so we can’t store the results in a reference to that object and then return it.
+
+2. List the temporary objects in the tester module. 
+
+a, b(1, 3), c(-5, 15), d(2, 4), e(8, 4)
+
+3. List the simplifications that you made to your class to minimize duplication. 
+
+Fraction(); //used default constructor many times to set an object to a self empty state
+isEmpty(); // used this function many times to check if the object is in a safe empty state or not
+used the “==” operator function to write the “!=” operator function
+used the “+” operator function to write the “+=” operator function
+
+4. Explain what you have learned in this workshop. 
+
+Write different types of operator functions with pass by reference or pass by 	copy method. 
+Code my implementation in such a way as to minimize the duplication of source 	code. For example, using previous function to complete new functions.
+
+QUIZ 4 REFLECTION (5/7)
+
+4. What is a free helper function
+ -is a function that obtains all of its information from the public member functions of the class that it supports.
+ - does not require access to the private members of its class.
+
+5. What is meant by class bloat
+- As we add data members, the class definition grows with new queries, this growth is called a class bloat. 

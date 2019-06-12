@@ -1,0 +1,49 @@
+
+/**********************************************************
+Workshop 7 - Derived Classes at home
+// Workshop <Workshop #7>
+// Name: Tashi Tsering
+// Student #: 114763170
+// Course: OOP244 Fall 2018
+// File: reflect.txt
+**********************************************************/
+
+1) Does the Hero class need to know about the existence of the SuperHero class?
+
+	No, the Hero class does not need to know of the existence of the SuperHero class.
+The Hero class only contains instance variables of its own.
+
+2) Does the SuperHero class need to know about the existence of the Hero class?
+
+	The SuperHero class needs to know the existence of Hero class because
+it inherits the base class' instance variables and contains its own. It also needs to know 
+the existence to call the base class constructor and pass arguments to those constructors.
+
+3) When you tried to make a Hero fight a SuperHero, what did it print out?
+	
+	It printed out "Ancient Battle" due to early binding where compiler matches function call
+with function definition at compile time, it matched the call of the function to the parent class. 
+
+
+4) True or False: are the following definitions for main valid?
+int main(){
+
+Hero("Achilles", 20, 6) * Hero("Hector", 30, 5);
+}
+	
+True, these are temporary objects that are destroyed once they reach the end of their scope.
+
+how about this?
+
+int main(){
+
+(Hero("Achilles", 20, 6) * Hero("Hector", 30, 5))
+			 *
+(Hero("Atlanta", 10, 3)	 * Hero("Hippolyta", 10, 2));
+	
+True, the compiler will create these temporary objects first, then
+match the heroes in paranthesis together. After the parenthesis, the heroes
+remaining will fight each other based on the middle asterisk that puts the
+winner of each hero against each other.
+
+HAD NO QUIZZES 

@@ -1,0 +1,31 @@
+1) How many elements are there in each C-style character string that stores a family or given name for
+account? Why?
+
+- For each C-style string that stores a family or given name for an accout, there are 41 elements.
+40 elements are used for the string and 1 element is used for the null terminator at the end of the string.
+
+2) Your class declares two member functions names set (...). In C, this would generate an error. Name
+the feature of C++ that allows this.
+
+- The feature is called overloading a function. This feature allows functions to have the same name
+with different definitions within the same scope. As long as they have different list of parameters,
+it would not generate an error.
+
+3) What have you learned during this workshop?
+	
+- In this workshop I learned how to access private members of a class, how to modify and gain access
+of those private members through public functions, such as set(...) and display() function. I also learned
+how to set an empty state for the private members. Learned a little bit about member functions from
+ostream and istream.
+
+Quiz 3 Reflection
+
+1. What is the difference between a class and a struct? 
+class is set default to private
+struct is set default to public
+classes are used in C++ but no C
+structs are used in both C++ and C
+
+3. What purpose does the const qualifier serve?
+- we are defining a member function for student
+- const is a query function where there is no change to any of the objects data members

@@ -1,0 +1,40 @@
+/**********************************************************
+Workshop 2 - Dynamic Memory At Home
+// Workshop <Workshop #2>
+// Name: Tashi Tsering
+// Student #: 114763170
+// Course: OOP244 Fall 2018
+// File: reflect.txt
+**********************************************************/
+
+1) Why do you need to allocate new dynamic memory when you increase the size of an existing array of dynamically allocated memory? 
+
+Another memory allocation is needed due to the fact the previous allocation in this pKingdom already has a dedicated set of memory thus the need of allocating memory is needed before use.
+
+2) The Kingdom structure stores the name of the kingdom in an array of characters. At the end of the program, we do not use the delete operator to deallocate the memory occupied by the name. Why don’t we need to use the delete operator on this array itself? Explain. 
+
+We do not need to deallocate the kingdom name array because we are deallocating the Kingdom pointer and the Kingdom name belongs whitin the pointer.
+
+3) There are two display(...) function definitions. How does the compiler know which definition to call from your main function?  
+
+The compilier know which one to call by exammining the types of the parameter that are being called.
+
+4) Describe what you have learned in this workshop.
+
+In this workshop, I have learned how to dynamically allocate objects and how to deallocate them when needed also how to add more memory when it is needed.
+
+
+Quiz One Reflection:
+
+2. list two example of scopes and explain where the contents of the scope are visible
+
+	global scope - visible to the entire program
+	block scope - visible to the code block
+
+4. explain dynamic memory and static memory 
+
+static: allocated at load time; includes memory for program instructions and data; linker determines amount needed
+(decided at compile time); reused by variables and objects as they neter and exit scope
+
+Dynamic: obtained during run-time; pointer stored in static memory; must be allocated and deallocated; 
+can cause memory leaks if not deallocated. 

@@ -1,0 +1,33 @@
+/**********************************************************
+Workshop 8 - Virtual functions athome
+// Workshop <Workshop #8>
+// Name: Tashi Tsering
+// Student #: 114763170
+// Course: OOP244 Fall 2018
+// File: reflect.txt
+**********************************************************/
+
+
+1.What is the difference between an abstract base class and a concrete class?
+Abstract class is like a wrap for the derivd classes, it containts only pure virtual functions, which
+set mandatory functions definitions for the derived classes. The concrete class is a functioning class,
+which has its member variables and defined member functions.
+
+2.Why do we need to have a pure virtual function in a base class?
+Pure virtual function in a base class make sure that all the derived classes will have their own definition
+of the function.
+
+3.Explain what have you learned in this workshop.
+I've learnt how to use the virtual and pure virtual functions.
+
+QUIZ REFLECTION #6
+
+What is an abstract class
+- An abstract class is a class that contains or inherits a pure virtual function.
+-  abstract base class contains or inherits at least one pure virtual member function.  
+The class definition contains the declaration of the pure virtual function.
+
+harry.person::display(cout) = Person:Harry
+
+
+

@@ -1,0 +1,30 @@
+/**********************************************************
+Workshop 6 - CLass with a Resource at home
+// Workshop <Workshop #6>
+// Name: Tashi Tsering
+// Student #: 114763170
+// Course: OOP244 Fall 2018
+// File: reflect.txt
+**********************************************************/
+
+1). Explain why the copy assignment operator checks for self-assignment before doing anything else.
+Because the copy assignment operator deletes the data from the current object, which, if object A = A, will delete the data from the object we copying from.
+
+2). Explain why a class that uses dynamic memory to hold its resources needs custom definitions of its copy constructor and its copy assignment operator.
+If we do not declare a copy constructor, the compiler inserts code that implements a shallow copy.  If we do not declare a copy assignment operator, the compiler 
+inserts code that implements a shallow assignment. 
+
+3). How did you avoid duplication of code?
+Creating new functions, which perform one particular task.
+
+4). List what you have learned in completing this workshop
+To create a class that uses dynamic memory, to define a copy contructor which makes a deep copy of an object, to overload operators. 
+
+Quiz 4&5 Reflection
+
+5. certain class desgin require prohibiting client code from copying or copy assisinging any instance of class. What can be done to prohibit from
+copying and/copy assinging
+= delete
+6. Assigning a temporary object to the current object requires additional code if the object manages resource. What can be done to prevent 
+the assigment operator from releasing not as yet acquired resource?
+we initialize each resource instance variable to an empty value (nullptr). 
